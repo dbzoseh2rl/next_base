@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/next_base?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 1234 # TODO: 본인의 MySQL 비밀번호로 변경해주세요!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        # 3. MySQL 8.0 이상 버전과의 호환성을 위해 방언(Dialect)을 명시해줍니다.
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
